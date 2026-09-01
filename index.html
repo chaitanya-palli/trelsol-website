@@ -1,0 +1,354 @@
+<!doctype html>
+  <html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trelsol — AI &amp; Digital Transformation Partner for UK SMEs</title>
+<meta name="description" content="Trelsol helps UK businesses save time, cut costs, and grow revenue with practical AI and digital transformation — chatbots, automation, local visibility, and consulting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+  /* Trelsol — static site styles */
+  :root {
+  --navy: #1C2B4A;
+--copper: #C08A4E;
+  --copper-dark: #A6763F;
+  --off-white: #FAF7F2;
+  --ink-soft: #5B564C;
+--border: #E8E3D9;
+  --white: #FFFFFF;
+  }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+background: var(--off-white);
+color: var(--navy);
+line-height: 1.55;
+-webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-family: 'Sora', sans-serif; font-weight: 700; color: var(--navy); line-height: 1.2; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); margin-bottom: 2rem; max-width: 40rem; }
+h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+p { color: var(--ink-soft); }
+a { color: var(--copper); text-decoration: none; }
+a:hover { color: var(--copper-dark); }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.wrap-narrow { max-width: 760px; }
+.section { padding: 88px 0; }
+.section h2 { margin-left: auto; margin-right: auto; }
+.section-pain, .section-about, .section-contact { text-align: center; }
+.section-pain h2, .section-about h2, .section-contact h2 { margin-left: auto; margin-right: auto; }
+.eyebrow {
+  font-size: 0.8rem;
+font-weight: 600;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: var(--copper);
+margin-bottom: 0.75rem;
+}
+.eyebrow-light { color: var(--copper); }
+/* Nav */
+.nav {
+position: sticky; top: 0; z-index: 50;
+background: rgba(250, 247, 242, 0.92);
+backdrop-filter: blur(8px);
+border-bottom: 1px solid var(--border);
+}
+.nav-inner { display: flex; align-items: center; gap: 32px; height: 72px; }
+.logo { display: flex; align-items: center; gap: 10px; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.15rem; color: var(--navy); }
+.logo:hover { color: var(--navy); }
+.nav-links { display: flex; gap: 28px; margin-left: auto; }
+.nav-links a { color: var(--navy); font-weight: 500; font-size: 0.95rem; }
+.nav-links a:hover { color: var(--copper); }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; }
+.nav-toggle span { width: 22px; height: 2px; background: var(--navy); display: block; }
+.btn {
+  display: inline-block;
+font-family: 'Manrope', sans-serif;
+font-weight: 600;
+padding: 14px 28px;
+border-radius: 6px;
+border: none;
+cursor: pointer;
+font-size: 0.95rem;
+}
+.btn-primary { background: var(--copper); color: var(--white); }
+.btn-primary:hover { background: var(--copper-dark); color: var(--white); }
+.btn-small { padding: 10px 20px; font-size: 0.88rem; }
+/* Hero */
+.hero { padding: 96px 0 88px; text-align: center; }
+.hero-inner { max-width: 760px; }
+.hero-subhead { font-size: 1.15rem; margin: 24px auto 32px; max-width: 620px; }
+.hero-secondary { display: block; margin-top: 16px; font-size: 0.9rem; color: var(--ink-soft); }
+.hero-secondary:hover { color: var(--copper); }
+/* Grids & cards */
+.grid { display: grid; gap: 28px; margin-top: 8px; text-align: left; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.card {
+  background: var(--white);
+border: 1px solid var(--border);
+border-radius: 10px;
+padding: 28px;
+}
+.card-icon { font-size: 1.6rem; margin-bottom: 14px; }
+.card p { font-size: 0.95rem; }
+.card-proof { text-align: center; }
+.proof-placeholder {
+  background: var(--off-white);
+border: 1px dashed var(--border);
+border-radius: 6px;
+padding: 40px 16px;
+color: var(--ink-soft);
+font-size: 0.9rem;
+margin-bottom: 18px;
+}
+.disclaimer { text-align: center; margin-top: 36px; font-size: 0.88rem; font-style: italic; color: var(--ink-soft); max-width: 640px; margin-left: auto; margin-right: auto; }
+/* Dark section (How it works) */
+.section-dark { background: var(--navy); text-align: center; }
+.h-light { color: var(--off-white); }
+.p-light { color: #C7CEDD; }
+  .steps { text-align: center; }
+.step-num {
+  width: 36px; height: 36px; border-radius: 50%;
+border: 1.5px solid var(--copper);
+color: var(--copper);
+display: flex; align-items: center; justify-content: center;
+font-family: 'Sora', sans-serif; font-weight: 700;
+margin: 0 auto 16px;
+}
+.step { text-align: center; }
+/* About */
+.about-body { font-size: 1.02rem; max-width: 680px; margin: 0 auto; }
+/* Contact */
+.contact-subhead { max-width: 520px; margin: 0 auto 32px; }
+.contact-form {
+  display: flex; flex-direction: column; gap: 16px;
+max-width: 480px; margin: 0 auto; text-align: left;
+}
+.contact-form label { font-size: 0.85rem; font-weight: 600; color: var(--navy); display: flex; flex-direction: column; gap: 6px; }
+.contact-form input {
+  font-family: 'Manrope', sans-serif;
+font-size: 0.95rem;
+padding: 12px 14px;
+border: 1px solid var(--border);
+border-radius: 6px;
+background: var(--white);
+color: var(--navy);
+}
+.contact-form input:focus { outline: 2px solid var(--copper); outline-offset: 1px; }
+.contact-form .btn { margin-top: 8px; align-self: center; }
+.contact-alt { margin-top: 20px; font-size: 0.9rem; }
+/* Footer */
+.footer { background: var(--navy); color: var(--off-white); padding: 40px 0 24px; }
+.footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid rgba(250,247,242,0.15); margin-bottom: 20px; }
+.footer-brand { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 0.95rem; }
+.footer-nav { display: flex; gap: 22px; }
+.footer-nav a { color: var(--off-white); opacity: 0.85; font-size: 0.9rem; }
+.footer-nav a:hover { color: var(--copper); opacity: 1; }
+.copyright { color: #C7CEDD; font-size: 0.82rem; }
+  /* Responsive */
+  @media (max-width: 900px) {
+  .grid-3, .grid-2 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 700px) {
+.nav-links {
+  position: absolute; top: 72px; left: 0; right: 0;
+background: var(--off-white);
+flex-direction: column;
+padding: 20px 24px;
+border-bottom: 1px solid var(--border);
+display: none;
+}
+.nav-links.open { display: flex; }
+.nav-toggle { display: flex; }
+.nav .btn-small { display: none; }
+.grid-3, .grid-2 { grid-template-columns: 1fr; }
+.section { padding: 64px 0; }
+.hero { padding: 64px 0 56px; }
+}
+</style>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='10' y='15' width='80' height='16' fill='%231C2B4A'/%3E%3Crect x='42' y='31' width='16' height='57' fill='%231C2B4A'/%3E%3Cpolygon points='58,64 82,64 58,88' fill='%23C08A4E'/%3E%3C/svg%3E">
+  </head>
+  <body>
+  <header class="nav">
+  <div class="wrap nav-inner">
+  <a href="#top" class="logo" aria-label="Trelsol home">
+  <svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true">
+  <rect x="10" y="15" width="80" height="16" fill="#1C2B4A"/>
+  <rect x="42" y="31" width="16" height="57" fill="#1C2B4A"/>
+  <polygon points="58,64 82,64 58,88" fill="#C08A4E"/>
+  </svg>
+  <span>Trelsol</span>
+  </a>
+  <nav class="nav-links">
+  <a href="#services">Services</a>
+  <a href="#how-it-works">How it works</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+  <a href="#contact" class="btn btn-primary btn-small">Book a Call</a>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+  <span></span><span></span><span></span>
+  </button>
+  </div>
+  </header>
+  <main id="top">
+  <!-- 1. Hero -->
+  <section class="hero">
+  <div class="wrap hero-inner">
+  <h1>Practical AI &amp; Digital Transformation for UK SMEs</h1>
+  <p class="hero-subhead">Trelsol helps UK businesses — dental practices, clinics, salons, trades, and more — save time, cut costs, and grow revenue with AI you can actually use.</p>
+<a href="#contact" class="btn btn-primary">Book a Free AI Readiness Call</a>
+  <a href="#how-it-works" class="hero-secondary">See how it works ↓</a>
+  </div>
+  </section>
+  <!-- 2. Pain strip -->
+  <section class="section section-pain">
+  <div class="wrap">
+  <p class="eyebrow">Sound familiar?</p>
+  <h2>Most SMEs are losing time and money in the same three places</h2>
+  <div class="grid grid-3">
+  <div class="card">
+  <div class="card-icon" aria-hidden="true">📞</div>
+  <h3>Missed calls and enquiries</h3>
+  <p>Every unanswered call or unread enquiry is a customer who books with someone else instead.</p>
+  </div>
+  <div class="card">
+  <div class="card-icon" aria-hidden="true">📋</div>
+  <h3>Manual admin eating your week</h3>
+  <p>Hours a week lost to scheduling, data entry, and chasing paperwork that a well-built system could do in minutes.</p>
+  </div>
+  <div class="card">
+  <div class="card-icon" aria-hidden="true">⭐</div>
+  <h3>Inconsistent online reviews</h3>
+  <p>Happy customers rarely leave reviews unprompted; unhappy ones almost always do. That gap shapes what new customers see first.</p>
+  </div>
+  </div>
+  </div>
+  </section>
+  <!-- 3. Services -->
+  <section class="section" id="services">
+  <div class="wrap">
+  <p class="eyebrow">What we do</p>
+  <h2>Four ways we help SMEs run leaner and grow faster</h2>
+  <div class="grid grid-2">
+  <div class="card">
+  <div class="card-icon" aria-hidden="true">💬</div>
+  <h3>AI Chatbots</h3>
+  <p>A 24/7 assistant on your website or WhatsApp that answers common questions, books appointments, and captures leads while you're with a customer.</p>
+  </div>
+  <div class="card">
+  <div class="card-icon" aria-hidden="true">🔗</div>
+  <h3>Business Automation</h3>
+  <p>Connect the tools you already use so leads, bookings, and follow-ups happen automatically — no manual re-entry, no dropped enquiries.</p>
+</div>
+<div class="card">
+<div class="card-icon" aria-hidden="true">📍</div>
+<h3>Google Business Profile &amp; Local Visibility</h3>
+<p>Make sure the customers already searching for you nearby actually find you first.</p>
+  </div>
+  <div class="card">
+  <div class="card-icon" aria-hidden="true">🧭</div>
+  <h3>Digital Transformation Consulting</h3>
+<p>Practical, jargon-free advice on where AI and automation will save you the most time and money — drawing on 19+ years running large-scale transformation programmes.</p>
+  </div>
+  </div>
+  </div>
+  </section>
+  <!-- 4. How it works -->
+  <section class="section section-dark" id="how-it-works">
+  <div class="wrap">
+  <p class="eyebrow eyebrow-light">How it works</p>
+<h2 class="h-light">Three steps, no jargon</h2>
+<div class="grid grid-3 steps">
+<div class="step">
+<div class="step-num">1</div>
+<h3 class="h-light">Assess</h3>
+<p class="p-light">A free 30-minute call to understand where time and money are leaking in your business.</p>
+  </div>
+  <div class="step">
+  <div class="step-num">2</div>
+  <h3 class="h-light">Build</h3>
+  <p class="p-light">We design and build the specific chatbot, automation, or dashboard that solves it — nothing generic, nothing you don't need.</p>
+  </div>
+  <div class="step">
+  <div class="step-num">3</div>
+  <h3 class="h-light">Scale</h3>
+  <p class="p-light">Once it's working, we expand it or hand you simple training so your team runs it independently.</p>
+  </div>
+  </div>
+  </div>
+  </section>
+  <!-- 5. Proof -->
+  <section class="section">
+  <div class="wrap">
+  <p class="eyebrow">See it in action</p>
+  <h2>Real examples, not promises</h2>
+  <div class="grid grid-2">
+  <div class="card card-proof">
+  <div class="proof-placeholder">Chatbot demo coming soon</div>
+  <h3>AI Chatbot demo</h3>
+<p>A live demo built for a fictional dental practice — try asking it to book an appointment.</p>
+  </div>
+  <div class="card card-proof">
+  <div class="proof-placeholder">Audit sample coming soon</div>
+  <h3>Google Business Profile audit sample</h3>
+<p>A sample audit of a real, public business listing — no business was contacted to produce this.</p>
+  </div>
+  </div>
+  <p class="disclaimer">These are demonstration projects built to show our approach — not client work. Ask us about a free assessment of your own business.</p>
+  </div>
+  </section>
+  <!-- 6. About -->
+  <section class="section section-about" id="about">
+  <div class="wrap wrap-narrow">
+  <p class="eyebrow">Who's behind Trelsol</p>
+  <h2>19 years running transformation programmes for organisations — now bringing that to SMEs directly</h2>
+<p class="about-body">Trelsol was founded by Chaitanya Palli, who spent 19+ years in Programme Management, Digital Transformation, and Vendor Management across telecom and large-scale consulting. Trelsol exists to bring that same discipline — practical, outcome-led, no wasted spend — to businesses that don't have an in-house transformation team, using today's AI and automation tools instead of multi-year corporate programmes.</p>
+  </div>
+  </section>
+  <!-- 7. Contact -->
+  <section class="section section-contact" id="contact">
+  <div class="wrap wrap-narrow">
+  <p class="eyebrow">Get started</p>
+  <h2>Book a free 30-minute AI readiness call</h2>
+<p class="contact-subhead">No pitch, no pressure — just a straight answer on where AI and automation could actually save you time and money.</p>
+<form class="contact-form" action="mailto:hello@trelsol.co.uk" method="post" enctype="text/plain">
+  <label>Name<input type="text" name="Name" required></label>
+  <label>Business name<input type="text" name="Business name"></label>
+  <label>Email<input type="email" name="Email" required></label>
+  <label>Phone (optional)<input type="tel" name="Phone"></label>
+  <label>What's your biggest time-sink right now?<input type="text" name="Time-sink" placeholder="e.g. answering the same questions all day"></label>
+  <button type="submit" class="btn btn-primary">Book My Free Call</button>
+  </form>
+  <p class="contact-alt">Or email <a href="mailto:hello@trelsol.co.uk">hello@trelsol.co.uk</a></p>
+  </div>
+  </section>
+  </main>
+  <footer class="footer">
+  <div class="wrap footer-inner">
+  <div class="footer-brand">Trelsol — AI &amp; Digital Transformation Partner for UK SMEs</div>
+<nav class="footer-nav">
+<a href="#services">Services</a>
+<a href="#how-it-works">How it works</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+  </div>
+  <div class="wrap">
+  <p class="copyright">© 2026 Trelsol.</p>
+  </div>
+  </footer>
+  <script>
+  document.querySelector('.nav-toggle').addEventListener('click', function () {
+  document.querySelector('.nav-links').classList.toggle('open');
+var expanded = this.getAttribute('aria-expanded') === 'true';
+this.setAttribute('aria-expanded', String(!expanded));
+});
+</script>
+  </body>
+  </html>
