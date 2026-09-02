@@ -451,7 +451,10 @@ display: none;
 <h2>Real examples, not promises</h2>
 <div class="grid grid-2">
 <div class="card card-proof">
-<div class="proof-placeholder">Chatbot demo coming soon</div>
+<div class="proof-placeholder">
+<p style="margin:0 0 16px;">Meet <strong>Smiley</strong>, a demo assistant for a fictional dental practice.</p>
+<button type="button" class="btn btn-primary btn-small" onclick="window.voiceflow &amp;&amp; window.voiceflow.chat &amp;&amp; window.voiceflow.chat.open();">Chat with Smiley</button>
+</div>
 <h3>AI Chatbot demo</h3>
 <p>A live demo built for a fictional dental practice — try asking it to book an appointment.</p>
 </div>
@@ -544,6 +547,22 @@ revealEls.forEach(function (el) { io.observe(el); });
 } else {
 document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in-view'); });
 }
+</script>
+<!-- Smiley — Bright Smile Dental demo chatbot (Voiceflow) -->
+<script type="text/javascript">
+(function(d, t) {
+var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+v.onload = function() {
+window.voiceflow.chat.load({
+verify: { projectID: '6a97cd1a36cc7b3f4a99c6c5' },
+url: 'https://general-runtime.voiceflow.com',
+voice: {
+url: "https://runtime-api.voiceflow.com"
+}
+});
+}
+v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+})(document, 'script');
 </script>
 </body>
 </html>
